@@ -1,0 +1,110 @@
+import { lazy, Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { ErrorBoundary } from "react-error-boundary";
+import { useTranslation } from "react-i18next";
+import ScrollToTop from "./components/common/ScrollToTop";
+import PageLoader from "./components/common/PageLoader";
+
+// Eagerly loaded pages (critical path — must render instantly)
+import Portal from "./pages/Portal";
+import Home from "./pages/Home";
+
+// Dynamic Imports (Code Splitting)
+const Browse = lazy(() => import("./pages/Browse"));
+const Watch = lazy(() => import("./pages/Watch"));
+const Character = lazy(() => import("./pages/Character"));
+const Staff = lazy(() => import("./pages/Staff"));
+const Schedule = lazy(() => import("./pages/Schedule"));
+const DMCA = lazy(() => import("./pages/DMCA"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const Watchlist = lazy(() => import("./pages/Watchlist"));
+const Profile = lazy(() => import("./pages/Profile"));
+const PublicProfile = lazy(() => import("./pages/PublicProfile"));
+const Settings = lazy(() => import("./pages/Settings"));
+const ContinueWatching = lazy(() => import("./pages/ContinueWatching"));
+const Notifications = lazy(() => import("./pages/Notifications"));
+const ImportExport = lazy(() => import("./pages/ImportExport"));
+const Stats = lazy(() => import("./pages/Stats"));
+const ForgotPassword = lazy(() => import("./pages/ForgotPassword"));
+const ResetPassword = lazy(() => import("./pages/ResetPassword"));
+const ChatRoom = lazy(() => import("./pages/ChatRoom"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
+import { Loader } from "lucide-react";
+
+const SuspenseLoader = () => (
+  <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
+    <Loader className="w-8 h-8 text-red-600 animate-spin" />
+  </div>
+);
+
+const ErrorFallback = ({ error }) => {
+  const { t } = useTranslation();
+  // Catch dynamic import chunk failures in Vite
+  if (
+    error.name === 'ChunkLoadError' || 
+    error.message.includes('Failed to fetch dynamically imported module') ||
+    error.message.includes('importing a dynamically imported module')
+  ) {
+    if (!sessionStorage.getItem('chunk_load_retried')) {
+      sessionStorage.setItem('chunk_load_retried', 'true');
+      window.location.reload();
+      return <SuspenseLoader />;
+    }
+  }
+
+  return (
+    <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center text-white p-6 text-center">
+      <h2 className="text-xl font-bold text-red-500 mb-2">{t('app.somethingWentWrong')}</h2>
+      <p className="text-white/40 mb-6 max-w-md text-sm">{error.message}</p>
+      <button onClick={() => window.location.reload()} className="px-6 py-2 bg-red-600 hover:bg-red-700 transition-colors rounded-[2px] font-bold text-xs uppercase tracking-widest">
+        {t('app.reloadPage')}
+      </button>
+    </div>
+  );
+};
+
+// Inner component so useLocation works inside Router
+function AppRoutes() {
+  const location = useLocation();
+
+  return (
+    <ErrorBoundary FallbackComponent={ErrorFallback} resetKeys={[location.pathname]}>
+      <Suspense fallback={<SuspenseLoader />}>
+        <Routes>
+          <Route path="/" element={<Portal />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/browse" element={<Browse />} />
+          <Route path="/watch/:id" element={<Watch />} />
+          <Route path="/character/:id" element={<Character />} />
+          <Route path="/staff/:id" element={<Staff />} />
+          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/dmca" element={<DMCA />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/user/:profileId" element={<PublicProfile />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/watching" element={<ContinueWatching />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/import" element={<ImportExport />} />
+          <Route path="/stats" element={<Stats />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
+          <Route path="/chat" element={<ChatRoom />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </ErrorBoundary>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <PageLoader />
+      <AppRoutes />
+    </Router>
+  );
+}

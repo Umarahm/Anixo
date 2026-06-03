@@ -1,0 +1,82 @@
+{
+  "version": 2,
+  "framework": "vite",
+  "crons": [
+    {
+      "path": "/api/cron-cleanup",
+      "schedule": "0 0 * * *"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/cron-cleanup",
+      "destination": "/api/cron-cleanup.js"
+    },
+    {
+      "source": "/auth/(.*)",
+      "destination": "/api/user.mjs"
+    },
+    {
+      "source": "/settings",
+      "has": [{ "type": "header", "key": "x-api", "value": "true" }],
+      "destination": "/api/user.mjs"
+    },
+    {
+      "source": "/settings/(.*)",
+      "has": [{ "type": "header", "key": "x-api", "value": "true" }],
+      "destination": "/api/user.mjs"
+    },
+    {
+      "source": "/watchlist",
+      "has": [{ "type": "header", "key": "x-api", "value": "true" }],
+      "destination": "/api/user.mjs"
+    },
+    {
+      "source": "/watchlist/(.*)",
+      "has": [{ "type": "header", "key": "x-api", "value": "true" }],
+      "destination": "/api/user.mjs"
+    },
+    {
+      "source": "/notifications",
+      "has": [{ "type": "header", "key": "x-api", "value": "true" }],
+      "destination": "/api/user.mjs"
+    },
+    {
+      "source": "/notifications/(.*)",
+      "has": [{ "type": "header", "key": "x-api", "value": "true" }],
+      "destination": "/api/user.mjs"
+    },
+    {
+      "source": "/progress",
+      "destination": "/api/user.mjs"
+    },
+    {
+      "source": "/progress/(.*)",
+      "destination": "/api/user.mjs"
+    },
+    {
+      "source": "/users",
+      "destination": "/api/user.mjs"
+    },
+    {
+      "source": "/users/(.*)",
+      "destination": "/api/user.mjs"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

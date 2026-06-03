@@ -1,0 +1,248 @@
+{
+  "watch": {
+    "animeNotFound": "Anime Not Found",
+    "notYetReleased": "Not Yet Released",
+    "estimatedArrival": "Estimated Arrival",
+    "loading": "Loading...",
+    "streamUnavailable": "Stream Unavailable",
+    "retry": "Retry",
+    "switchServer": "Switch Server",
+    "thankYou": "Thank You!",
+    "reportSuccess": "Report submitted successfully"
+  },
+  "player": {
+    "focus": "Focus",
+    "autoNext": "AutoNext",
+    "autoPlay": "AutoPlay",
+    "prev": "Prev",
+    "next": "Next",
+    "report": "Report",
+    "episode": "Episode "
+  },
+  "sidebar": {
+    "episodes": "Episodes",
+    "noEpisodes": "No episodes found",
+    "clearSearch": "Clear Search",
+    "ep": "EP "
+  },
+  "report": {
+    "issue": "Report Issue",
+    "episodeLabel": "Episode: ",
+    "description": "Please let us know what's wrong so we can fix it as soon as possible.",
+    "otherDetails": "Other Details:",
+    "send": "Send Report"
+  },
+  "seasons": {
+    "title": "Seasons"
+  },
+  "skipTime": {
+    "title": "Add Skip Time",
+    "subtitle": "Set intro/outro for Ep ",
+    "start": "Start (sec)",
+    "end": "End (sec)",
+    "save": "Save Timeline"
+  },
+  "characters": {
+    "cast": "Character Cast",
+    "japanese": "Japanese"
+  },
+  "details": {
+    "country": "Country:",
+    "premiered": "Premiered:",
+    "dateAired": "Date aired:",
+    "episodes": "Episodes:",
+    "duration": "Duration:",
+    "status": "Status:",
+    "malScore": "MAL Score:",
+    "links": "Links:",
+    "mal": "MAL",
+    "studios": "Studios:",
+    "producers": "Producers:",
+    "download": "Download",
+    "ratingThanks": "Thank you for rating!",
+    "ratingFeedback": "Your feedback is appreciated.",
+    "ratingPrompt": "How'd you rate this anime?",
+    "notFound": "Anime Not Found",
+    "inList": "In List",
+    "close": "Close",
+    "addToList": "Add to List",
+    "noSynopsis": "No synopsis available."
+  },
+  "browse": {
+    "title": "Browse",
+    "reset": "Reset",
+    "close": "Close",
+    "country": "Country",
+    "language": "Language",
+    "excludeList": "Exclude my list",
+    "sync": "Sync",
+    "degraded": "AniList Search Degraded",
+    "noResults": "No results found",
+    "noResultsDesc": "We couldn't find anything matching your exact filter setup. Try relaxing your constraints.",
+    "placeholder": "Universal Search...",
+    "types": "Types",
+    "genres": "Genres",
+    "status": "Status",
+    "advanced": "Advanced",
+    "degradedDesc": "AniList is currently experiencing high load and has temporarily disabled text search. We're showing you results from MyAnimeList (Jikan) as a fallback. Results might be slightly different than usual.",
+    "clearFilters": "Clear all filters",
+    "typesOptions": {
+      "tv": "TV",
+      "movie": "Movie",
+      "ova": "OVA",
+      "ona": "ONA",
+      "special": "Special"
+    },
+    "statusOptions": {
+      "any": "Any",
+      "releasing": "Releasing",
+      "finished": "Finished",
+      "upcoming": "Upcoming"
+    },
+    "advancedOptions": {
+      "season": "Season",
+      "year": "Year"
+    },
+    "countryOptions": {
+      "china": "China",
+      "japan": "Japan"
+    },
+    "languageOptions": {
+      "sub": "Sub",
+      "dub": "Dub"
+    }
+  },
+  "character": {
+    "loading": "Loading Character...",
+    "notFound": "Character Not Found",
+    "return": "Return",
+    "profile": "Character Profile",
+    "age": "Age: ",
+    "bloodType": "Blood Type: ",
+    "favourites": "Favourites: ",
+    "voiceActors": "Voice Actors",
+    "japanese": "Japanese",
+    "noVoiceActor": "No Voice Actor Found",
+    "biography": "Biography",
+    "appearances": "Appearances",
+    "noBiography": "No biography available for this character.",
+    "titles": "TITLES",
+    "favoritedBy": "This character has been favorited by {{count}} AniList users across the globe."
+  },
+  "continueWatching": {
+    "title": "Continue Watching",
+    "noSession": "No Active Session",
+    "desc": "Start watching an anime and we'll keep track of your progress here!",
+    "explore": "Explore Anime",
+    "removeFromHistory": "Remove from history",
+    "syncingLibrary": "Syncing Library...",
+    "syncFromAnilist": "Sync from AniList",
+    "syncing": "Syncing...",
+    "waitCooldown": "Wait {{cooldown}}s",
+    "anilistSync": "AniList Sync"
+  },
+  "nav": {
+    "profile": "Profile",
+    "continueWatching": "Continue Watching",
+    "bookmarks": "Bookmarks",
+    "notifications": "Notifications",
+    "stats": "Stats",
+    "importExport": "Import/Export",
+    "settings": "Settings"
+  },
+  "comments": {
+    "deleted": "This comment has been deleted.",
+    "cancel": "Cancel",
+    "reply": "Reply",
+    "more": "More",
+    "edit": "Edit",
+    "delete": "Delete",
+    "report": "Report",
+    "copyLink": "Copy Link",
+    "title": "Comments",
+    "empty": "Be the first to comment",
+    "recommended": "Recommended",
+    "related": "Related",
+    "all": "All "
+  },
+  "share": {
+    "loveThisSite": "Love this site?",
+    "shareIt": "Share it and let others know!",
+    "shares": "SHARES"
+  },
+  "app": {
+    "somethingWentWrong": "Something went wrong",
+    "reloadPage": "Reload Page"
+  },
+  "profile": {
+    "verifiedUser": "Verified User",
+    "username": "Username",
+    "emailAddress": "Email Address",
+    "displayName": "Display Name",
+    "forgotPassword": "Forgot Password?",
+    "strength": "Strength",
+    "settingsTitle": "Profile Settings",
+    "settingsDesc": "Manage your AniXo profile settings and account preferences.",
+    "updatedSuccess": "Profile updated successfully",
+    "updateFailed": "Failed to update profile",
+    "avatarUpdated": "Avatar updated successfully",
+    "avatarUpdateFailed": "Failed to update avatar",
+    "changeAvatar": "Change Avatar",
+    "discardPassword": "Discard Password",
+    "changePassword": "Change Password",
+    "currentPasswordPlaceholder": "Current password",
+    "newPasswordPlaceholder": "New password",
+    "confirmPasswordPlaceholder": "Confirm password",
+    "weak": "Weak",
+    "medium": "Medium",
+    "strong": "Strong",
+    "saving": "Saving...",
+    "saveChanges": "Save Changes",
+    "passwordsMismatch": "Passwords do not match!",
+    "passwordTooShort": "Password must be at least 6 characters."
+  },
+  "portal": {
+    "watchFree": "Watch Free ",
+    "anime": "Anime",
+    "filter": "Filter",
+    "watchNow": "Watch now",
+    "bestFreeStreaming": "AniXo: Best Free Anime Streaming",
+    "transcendsDesc": "Anime transcends mere animation; it serves as a portal to captivating worlds brimming with emotion, creativity, and storytelling. From exhilarating battles to poignant romantic narratives, anime has solidified its place as a global cornerstone.",
+    "notAllPlatforms": "However, not all platforms deliver an exceptional experience. Among the myriad options, ",
+    "domain": " AniXo.online ",
+    "premiumPlatform": "AniXo is a premium anime platform that offers a safe, fast, and high-quality streaming experience. We prioritize user interface, minimal ads, and vast database synchronization for the most accurate tracking.",
+    "episodes": "Episodes",
+    "streaming": "Streaming",
+    "about": "About",
+    "connect": "Connect",
+    "seoTitle": "AniXo | Watch Free Anime Online",
+    "online": "Online",
+    "searchPlaceholder": "Search anime...",
+    "shinesBeacon": "shines as a beacon of excellence for enthusiasts.",
+    "whatIsAnixo": "1. What is AniXo.online?",
+    "adFree": "Ad-Free"
+  },
+  "alphabetNav": {
+    "searchingByAlphabet": "Searching anime order by alphabet name ",
+    "aToZ": "A to Z",
+    "all": "All"
+  },
+  "threeColumn": {
+    "upcoming": "Upcoming",
+    "mostViewed": "MOST VIEWED",
+    "newReleases": "NEW\nRELEASES",
+    "justCompleted": "JUST\nCOMPLETED",
+    "day": "Day",
+    "week": "Week",
+    "month": "Month"
+  },
+  "home": {
+    "syncAnilistLibrary": "Sync AniList Library",
+    "importProgress": "Import your watching progress and bookmarks directly from your AniList profile.",
+    "maybeLater": "Maybe later",
+    "popularThisSeason": "POPULAR THIS SEASON",
+    "signInToSync": "Sign in to Sync",
+    "goToSync": "Go to Sync",
+    "connectAnilist": "Connect AniList"
+  }
+}
